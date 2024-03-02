@@ -30,7 +30,7 @@ function Hero({ img, headText, subText, page }) {
         {page !== "quiz" && (
           <Link
             to="/quiz"
-            className="btn w-[400px] my-7 flex justify-center items-center lg:py-4 uppercase font-bold text-xl"
+            className="btn w-[200px] my-7 mx-7 lg:mx-0 flex justify-center items-center lg:py-4 uppercase font-bold text-xl"
           >
             Get Started
           </Link>
