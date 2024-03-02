@@ -10,6 +10,7 @@ function Quiz() {
         img="/assets/quizHero.gif"
         headText={"Dive into Endless Learning Possibilities"}
         subText={"Explore Our Collection of Quizzes on Mayeso"}
+        page={"quiz"}
       />
       <div className="py-10">
         <h1 className="text-5xl text-center">QuizID: {quizId}</h1>

@@ -8,6 +8,7 @@ function Quizes() {
         img="/assets/quizesHero.gif"
         headText={"Dive into Endless Learning Possibilities"}
         subText={"Explore Our Collection of Quizzes on Mayeso"}
+        page={"quiz"}
       />
     </div>
   );
