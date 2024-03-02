@@ -8,6 +8,7 @@ function Home() {
         img={"/assets/homeHero.gif"}
         headText={"Unlock Your Potential with Mayeso"}
         subText={"Your Personal Learning Companion"}
+        page={"home"}
       />
     </div>
   );
