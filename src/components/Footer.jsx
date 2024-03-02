@@ -36,9 +36,9 @@ function Footer() {
               <FaDribbbleSquare size={30} />
             </div>
           </div>
-          <div className="flex gap-6 col-span-3 lg:col-span-2 justify-center">
+          <div className="grid grid-cols-2 lg:flex w-full lg:gap-6 col-span-3 lg:col-span-2 justify-center ">
             <div className="">
-              <h2 className="text-gray-800 font-semibold uppercase mb-3">
+              <h2 className="text-gray-800 font-semibold text-xs lg:text-lg uppercase mb-3">
                 documentation
               </h2>
               <div className="list-none flex flex-col gap-2 text-xs">
@@ -52,7 +52,7 @@ function Footer() {
               </div>
             </div>
             <div className="">
-              <h2 className="text-gray-800 font-semibold uppercase mb-3">
+              <h2 className="text-gray-800 text-xs lg:text-lg font-semibold uppercase mb-3">
                 Guidelines
               </h2>
               <div className="list-none flex flex-col gap-2 text-xs">
@@ -61,7 +61,7 @@ function Footer() {
               </div>
             </div>
             <div className="">
-              <h2 className="text-gray-800 font-semibold uppercase mb-3">
+              <h2 className="text-gray-800 text-xs lg:text-lg font-semibold uppercase mb-3">
                 Community
               </h2>
               <div className="list-none flex flex-col gap-2 text-xs">
@@ -70,7 +70,7 @@ function Footer() {
               </div>
             </div>
             <div className="">
-              <h2 className="text-gray-800 font-semibold uppercase mb-3">
+              <h2 className="text-gray-800 text-xs lg:text-lg font-semibold uppercase mb-3">
                 Legal
               </h2>
               <div className="list-none flex flex-col gap-2 text-xs">
