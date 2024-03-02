@@ -81,7 +81,7 @@ function Navbar() {
         <div
           className={
             showNav
-              ? "fixed top-0 left-0 lg:hidden w-[50%] h-full  flex flex-col px-4 bg-black/90 py-7  gap-6 duration-200  shadow-sm"
+              ? "fixed top-0 left-0 lg:hidden w-[65%] h-full  flex flex-col px-4 bg-black/90 py-7  gap-6 duration-200  shadow-sm"
               : "fixed top-0 left-[-100%] lg:hidden w-[50%] h-full  flex flex-col px-4 bg-black/90 py-1  gap-6 duration-200  shadow-sm"
           }
         >
