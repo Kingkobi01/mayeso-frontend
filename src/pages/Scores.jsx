@@ -5,7 +5,7 @@ function Scores() {
   return (
     <div>
       <Hero
-        img="/src/assets/scoresHero.gif"
+        img="/assets/scoresHero.gif"
         headText={"Track Your Progress, Celebrate Your Success"}
         subText={"View Your Quiz Scores on Mayeso"}
       />

@@ -1,12 +1,12 @@
 import React from "react";
-import faqData from "../assets/faq,js";
 import { Hero } from "../components";
+import faqData from "../data/faq,js";
 
 function FAQ() {
   return (
     <div className="">
       <Hero
-        img="src/assets/faqHero.gif"
+        img="/assets/faqHero.gif"
         headText={"Got Questions? "}
         subText={
           "We've Got Answers! Explore our Frequently Asked Questions to find the information you need."

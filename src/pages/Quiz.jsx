@@ -7,7 +7,7 @@ function Quiz() {
   return (
     <div>
       <Hero
-        img="/src/assets/quizHero.gif"
+        img="/assets/quizHero.gif"
         headText={"Dive into Endless Learning Possibilities"}
         subText={"Explore Our Collection of Quizzes on Mayeso"}
       />

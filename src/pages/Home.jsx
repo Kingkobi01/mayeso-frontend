@@ -5,7 +5,7 @@ function Home() {
   return (
     <div className="">
       <Hero
-        img="src/assets/homeHero.gif"
+        img={"/assets/homeHero.gif"}
         headText={"Unlock Your Potential with Mayeso"}
         subText={"Your Personal Learning Companion"}
       />

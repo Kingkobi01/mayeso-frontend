@@ -5,7 +5,7 @@ function About() {
   return (
     <section className="">
       <Hero
-        img="src/assets/aboutHero.gif"
+        img="assets/aboutHero.gif"
         headText={"Empowering Learning, Enriching Lives"}
         subText={"Discover the Story Behind Mayeso"}
       />

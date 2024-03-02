@@ -13,7 +13,7 @@ function Navbar() {
               to="/"
               className="uppercase cursor-pointer text-xl font-bold hover:tracking-wider duration-200 flex gap-2 items-center"
             >
-              <img src="/src/assets/brand.png" alt="" width={"45px"} />
+              <img src="/assets/brand.png" alt="" width={"45px"} />
               <h1>mayeso.</h1>
             </Link>
           )}
@@ -90,7 +90,7 @@ function Navbar() {
               to="/"
               className="uppercase cursor-pointer text-xl font-bold hover:tracking-wider duration-200 flex gap-2 items-center"
             >
-              <img src="/src/assets/brand.png" alt="" width={"45px"} />
+              <img src="/assets/brand.png" alt="" width={"45px"} />
               <h1>mayeso.</h1>
             </Link>
           </div>

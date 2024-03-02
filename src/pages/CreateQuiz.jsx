@@ -5,7 +5,7 @@ function CreateQuiz() {
   return (
     <div className="">
       <Hero
-        img="/src/assets/createHero.gif"
+        img="/assets/createHero.gif"
         headText={"Craft Your Knowledge Adventure"}
         subText={"Build Custom Quizzes with Mayeso"}
       />
