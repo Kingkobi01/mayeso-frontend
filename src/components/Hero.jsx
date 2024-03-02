@@ -9,7 +9,7 @@ function Hero({ img, headText, subText, page }) {
         page === "home" && "lg:mb-10"
       } flex flex-col lg:flex-row items-center justify-center gap-6`}
     >
-      <div className="text-center mt-8 lg:mt-6 lg:text-left flex flex-col gap-6 md:gap-3 w-[50%]">
+      <div className="text-center mt-8 lg:mt-6 lg:text-left flex flex-col items-center lg:items-start gap-6 md:gap-3 w-[50%]">
         <h1 className="text-3xl lg:text-4xl font-bold">{headText}</h1>
         <p className="text-xl ">{subText}</p>
         <div className="font-semibold capitalize text-lg">
