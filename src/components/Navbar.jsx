@@ -11,7 +11,7 @@ function Navbar() {
           {!showNav && (
             <Link
               to="/"
-              className="uppercase cursor-pointer text-xl font-bold hover:tracking-wider duration-200 flex gap-2 items-center"
+              className="uppercase cursor-pointer hover:text-secondary duration-200 text-xl font-bold hover:tracking-wider flex gap-2 items-center"
             >
               <img src="/assets/brand.png" alt="" width={"45px"} />
               <h1>mayeso.</h1>
@@ -23,7 +23,7 @@ function Navbar() {
             to="/about"
             className={({ isActive }) =>
               isActive
-                ? "uppercase cursor-pointer text-green-500"
+                ? "uppercase cursor-pointer hover:text-secondary duration-200 text-green-500"
                 : "uppercase cursor-pointer"
             }
           >
@@ -33,8 +33,8 @@ function Navbar() {
             to="/quiz"
             className={({ isActive }) =>
               isActive
-                ? "uppercase cursor-pointer text-green-500"
-                : "uppercase cursor-pointer"
+                ? "uppercase cursor-pointer hover:text-secondary duration-200 text-green-500"
+                : "uppercase cursor-pointer hover:text-secondary duration-200"
             }
           >
             My Quizes
@@ -43,8 +43,8 @@ function Navbar() {
             to="/scores"
             className={({ isActive }) =>
               isActive
-                ? "uppercase cursor-pointer text-green-500"
-                : "uppercase cursor-pointer"
+                ? "uppercase cursor-pointer hover:text-secondary duration-200 text-green-500"
+                : "uppercase cursor-pointer hover:text-secondary duration-200"
             }
           >
             scores
@@ -53,8 +53,8 @@ function Navbar() {
             to="/faq"
             className={({ isActive }) =>
               isActive
-                ? "uppercase cursor-pointer text-green-500"
-                : "uppercase cursor-pointer"
+                ? "uppercase cursor-pointer hover:text-secondary duration-200 text-green-500"
+                : "uppercase cursor-pointer hover:text-secondary duration-200"
             }
           >
             faq
@@ -65,7 +65,7 @@ function Navbar() {
             Create New Quiz
           </Link>
           <div
-            className="lg:hidden text-accent fixed right-4"
+            className="lg:hidden text-accent fixed right-10 top-12 lg:right-4"
             onClick={() => {
               setShowNav((prevState) => !prevState);
             }}
@@ -81,14 +81,14 @@ function Navbar() {
         <div
           className={
             showNav
-              ? "fixed top-0 left-0 lg:hidden w-[50%] h-full  flex flex-col px-4 bg-black/50 py-7  gap-6 duration-200  shadow-sm"
-              : "fixed top-0 left-[-100%] lg:hidden w-[50%] h-full  flex flex-col px-4 bg-black/50 py-1  gap-6 duration-200  shadow-sm"
+              ? "fixed top-0 left-0 lg:hidden w-[50%] h-full  flex flex-col px-4 bg-black/90 py-7  gap-6 duration-200  shadow-sm"
+              : "fixed top-0 left-[-100%] lg:hidden w-[50%] h-full  flex flex-col px-4 bg-black/90 py-1  gap-6 duration-200  shadow-sm"
           }
         >
           <div>
             <Link
               to="/"
-              className="uppercase cursor-pointer text-xl font-bold hover:tracking-wider duration-200 flex gap-2 items-center"
+              className="uppercase cursor-pointer hover:text-secondary duration-200 text-xl font-bold hover:tracking-wider flex gap-2 items-center"
             >
               <img src="/assets/brand.png" alt="" width={"45px"} />
               <h1>mayeso.</h1>
@@ -99,8 +99,8 @@ function Navbar() {
               to="/about"
               className={({ isActive }) =>
                 isActive
-                  ? "uppercase cursor-pointer border-b pb-3  text-center border-secondary/40 text-green-500"
-                  : "uppercase cursor-pointer border-b pb-3  text-center border-secondary/40"
+                  ? "uppercase cursor-pointer hover:text-secondary duration-200 border-b pb-3  text-center border-secondary/40 text-green-500"
+                  : "uppercase cursor-pointer hover:text-secondary duration-200 border-b pb-3  text-center border-secondary/40"
               }
             >
               About Us
@@ -109,8 +109,8 @@ function Navbar() {
               to="/quiz"
               className={({ isActive }) =>
                 isActive
-                  ? "uppercase cursor-pointer border-b pb-3  text-center border-secondary/40 text-green-500"
-                  : "uppercase cursor-pointer border-b pb-3  text-center border-secondary/40"
+                  ? "uppercase cursor-pointer hover:text-secondary duration-200 border-b pb-3  text-center border-secondary/40 text-green-500"
+                  : "uppercase cursor-pointer hover:text-secondary duration-200 border-b pb-3  text-center border-secondary/40"
               }
             >
               My Quizes
@@ -119,8 +119,8 @@ function Navbar() {
               to="/scores"
               className={({ isActive }) =>
                 isActive
-                  ? "uppercase cursor-pointer border-b pb-3  text-center border-secondary/40 text-green-500"
-                  : "uppercase cursor-pointer border-b pb-3  text-center border-secondary/40"
+                  ? "uppercase cursor-pointer hover:text-secondary duration-200 border-b pb-3  text-center border-secondary/40 text-green-500"
+                  : "uppercase cursor-pointer hover:text-secondary duration-200 border-b pb-3  text-center border-secondary/40"
               }
             >
               scores
@@ -129,15 +129,15 @@ function Navbar() {
               to="/faq"
               className={({ isActive }) =>
                 isActive
-                  ? "uppercase cursor-pointer border-b pb-3  text-center border-secondary/40 text-green-500"
-                  : "uppercase cursor-pointer border-b pb-3  text-center border-secondary/40"
+                  ? "uppercase cursor-pointer hover:text-secondary duration-200 border-b pb-3  text-center border-secondary/40 text-green-500"
+                  : "uppercase cursor-pointer hover:text-secondary duration-200 border-b pb-3  text-center border-secondary/40"
               }
             >
               faq
             </NavLink>
           </div>
           <div className="cursor-pointer mt-4 mx-auto">
-            <Link to={"/quiz/create"} className="btn ">
+            <Link to={"/quiz/create"} className="btn">
               Create New Quiz
             </Link>
           </div>
