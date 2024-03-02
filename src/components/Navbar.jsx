@@ -24,7 +24,7 @@ function Navbar() {
             className={({ isActive }) =>
               isActive
                 ? "uppercase cursor-pointer hover:text-secondary duration-200 text-green-500"
-                : "uppercase cursor-pointer"
+                : "uppercase cursor-pointer hover:text-secondary duration-200"
             }
           >
             About Us
