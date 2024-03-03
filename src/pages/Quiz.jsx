@@ -60,6 +60,8 @@ function Quiz() {
     const score = correctQuestions.length;
     setQuizScore((prevState) => ({ ...prevState, score }));
 
+    // localStorage.setItem("scores", JSON.str)
+
     setSubmitted(true);
   };
 
@@ -115,6 +117,13 @@ function Quiz() {
               <p>
                 {currentQuestionIndex + 1}/{quiz.questions.length}
               </p>
+
+              <Link
+                className="btn flex items-center justify-center my-2"
+                to={"/quiz"}
+              >
+                Cancel Quiz
+              </Link>
             </div>
             <div>
               {!submitted && !timeIsUp ? (
