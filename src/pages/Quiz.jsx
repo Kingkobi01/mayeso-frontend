@@ -90,7 +90,7 @@ function Quiz() {
             <div className="absolute top-2 lg:lop-5  right-5">
               <Timer
                 key={timerKey}
-                 initialTime={quiz.duration * 60}
+                initialTime={quiz.duration * 60}
                 timeIsUp={timeIsUp}
                 setTimeIsUp={setTimeIsUp}
               />
@@ -117,7 +117,7 @@ function Quiz() {
               </p>
             </div>
             <div>
-              {!submitted || !timeIsUp ? (
+              {!submitted && !timeIsUp ? (
                 <>
                   <Question
                     questions={quiz.questions}
