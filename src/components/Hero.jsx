@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ReactTyped } from "react-typed";
+import QuizContext from "../context/quizContext";
 
 function Hero({ img, headText, subText, page }) {
+  const { topics } = useContext(QuizContext);
   return (
     <div
       className={`px-4 mx-auto max-w-[1240px] ${
@@ -14,18 +16,7 @@ function Hero({ img, headText, subText, page }) {
         <p className="text-xl ">{subText}</p>
         <div className="font-semibold capitalize text-lg">
           <span>solve questions about </span>
-          <ReactTyped
-            className="text-secondary"
-            strings={[
-              "Sports",
-              "Geography",
-              "Mathematics",
-              "History",
-              "Entertainment",
-              "Science",
-            ]}
-            loop
-          />
+          <ReactTyped className="text-secondary" strings={topics} loop />
         </div>
         {page !== "quiz" && (
           <Link
