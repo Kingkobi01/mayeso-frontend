@@ -125,7 +125,7 @@ function Quiz() {
                     quizStatus={quizStatus}
                     setQuizStatus={setQuizStatus}
                   />
-                  <div className="controllers flex items-center justify-between w-[90%] lg:[w-50] mx-auto">
+                  <div className="controllers flex items-center justify-between w-full lg:[w-50] mx-auto">
                     <div>
                       <button
                         onClick={firstQuestion}
@@ -163,7 +163,7 @@ function Quiz() {
                         onClick={nextQuestion}
                         className={`btn mx-2 ${
                           currentQuestionIndex === quiz.questions.length - 1 &&
-                          "bg-gray-600/40 border-none hover:bg-gray-800 hover:text-slate-400"
+                          "bg-gray-600/40 border-none hover:bg-gray-800 hover:text-slate-400 hidden md:inline-block"
                         }`}
                       >
                         <FaStepForward />
@@ -172,7 +172,7 @@ function Quiz() {
                         onClick={lastQuestion}
                         className={`btn ${
                           currentQuestionIndex === quiz.questions.length - 1 &&
-                          "bg-gray-600/40 border-none hover:bg-gray-800 hover:text-slate-400"
+                          "bg-gray-600/40 border-none hover:bg-gray-800 hover:text-slate-400 hidden md:inline-block"
                         }`}
                       >
                         <FaForward />
