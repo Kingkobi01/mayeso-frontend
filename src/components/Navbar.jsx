@@ -65,7 +65,7 @@ function Navbar() {
             Create New Quiz
           </Link>
           <div
-            className="lg:hidden text-accent fixed right-10 top-12 lg:right-4"
+            className="lg:hidden text-accent fixed right-10 top-12 lg:right-4 z-50"
             onClick={() => {
               setShowNav((prevState) => !prevState);
             }}
