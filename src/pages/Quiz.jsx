@@ -119,7 +119,7 @@ function Quiz() {
               </p>
 
               <Link
-                className="btn flex items-center justify-center my-2"
+                className="btn flex items-center justify-center my-2 lg:max-w-[300px]"
                 to={"/quiz"}
               >
                 Cancel Quiz
