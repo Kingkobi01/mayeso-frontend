@@ -9,14 +9,16 @@ import {
 import { Link, useParams } from "react-router-dom";
 import { Hero, Question } from "../components";
 import Timer from "../components/Timer";
+import ScoresContext from "../context/ScoresContext";
 import quizContext from "../context/quizContext";
 
 function Quiz() {
   const { quizId } = useParams();
   const { quizes = [] } = useContext(quizContext);
+  const { scores } = useContext(ScoresContext);
   const [quizStatus, setQuizStatus] = useState({});
   const [submitted, setSubmitted] = useState(false);
-  const [timeIsUp, setTimeIsUp] = useState(false);
+  const [timeIsUp, setTimeIsUp] = useState("no");
   const [timerKey, setTimerKey] = useState(0);
 
   // Find the quiz object by quizId
@@ -52,21 +54,30 @@ function Quiz() {
   };
 
   const handleSubmit = () => {
-    console.log(quizStatus);
     const indices = Object.keys(quizStatus);
     const correctQuestions = indices.filter(
       (index) => quizStatus[index].status === "correct"
     );
+    console.log(correctQuestions);
     const score = correctQuestions.length;
-    setQuizScore((prevState) => ({ ...prevState, score }));
+    setQuizScore((prevState) => ({ ...prevState, score: score }));
 
-    // localStorage.setItem("scores", JSON.str)
+    localStorage.setItem(
+      "scores",
+      JSON.stringify([
+        ...scores,
+        {
+          quizId: quiz._id,
+          ...quizScore,
+        },
+      ])
+    );
 
     setSubmitted(true);
   };
 
   useEffect(() => {
-    if (timeIsUp && !submitted) {
+    if (timeIsUp === "yes" && !submitted) {
       handleSubmit();
     }
   }, [timeIsUp, submitted, handleSubmit]);
@@ -74,7 +85,7 @@ function Quiz() {
   const tryAgain = () => {
     setSubmitted(false);
     setcurrentQuestionIndex(0);
-    setTimeIsUp(false);
+    setTimeIsUp("no");
     setTimerKey((prevKey) => prevKey + 1); // Increment the key to remount Timer component
   };
 
@@ -126,7 +137,7 @@ function Quiz() {
               </Link>
             </div>
             <div>
-              {!submitted && !timeIsUp ? (
+              {!submitted && timeIsUp !== "yes" ? (
                 <>
                   <Question
                     questions={quiz.questions}
@@ -157,7 +168,10 @@ function Quiz() {
                     </div>
                     <div>
                       <button
-                        onClick={handleSubmit}
+                        onClick={() => {
+                          handleSubmit();
+                          setTimeIsUp("done");
+                        }}
                         className={`${
                           currentQuestionIndex === quiz.questions.length - 1
                             ? "btn"
@@ -192,7 +206,9 @@ function Quiz() {
               ) : (
                 <div className="flex flex-col gap-3">
                   <h3 className="text-3xl text-center py-6">
-                    {timeIsUp && <p className="my-3">TIme is Up!..</p>}
+                    {timeIsUp === "yes" && (
+                      <p className="my-3">TIme is Up!..</p>
+                    )}
                     You had {quizScore.score} out of {quizScore.outOf}
                   </h3>
                   <div className="flex gap-4 items-center mx-auto">

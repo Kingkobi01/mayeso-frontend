@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { ScoresContext } from "./ScoresContext";
+import ScoresContext from "./ScoresContext";
 
 const ScoresContextProvider = ({ children }) => {
-  const [scores, SetScores] = useState([]);
+  const [scores, setScores] = useState([]);
   return (
-    <ScoresContext.Provider value={{ scores, SetScores }}>
+    <ScoresContext.Provider value={{ scores, setScores }}>
       {children}
     </ScoresContext.Provider>
   );
