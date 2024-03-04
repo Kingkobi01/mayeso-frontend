@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { FaCheckCircle, FaHourglassEnd } from "react-icons/fa";
+import { TbClockHour5 } from "react-icons/tb";
 
 const Timer = ({ initialTime, onTimeUp, timeIsUp, setTimeIsUp }) => {
   const [time, setTime] = useState(initialTime);
@@ -8,7 +10,7 @@ const Timer = ({ initialTime, onTimeUp, timeIsUp, setTimeIsUp }) => {
       setTime((prevTime) => {
         if (prevTime === 0) {
           clearInterval(timer);
-          setTimeIsUp(true);
+          setTimeIsUp("yes"); // Update timeIsUp state when time reaches 0
           onTimeUp && onTimeUp();
           return 0;
         } else {
@@ -17,6 +19,7 @@ const Timer = ({ initialTime, onTimeUp, timeIsUp, setTimeIsUp }) => {
       });
     }, 1000);
 
+    // Clear the interval when the component unmounts
     return () => clearInterval(timer);
   }, []);
 
@@ -26,11 +29,38 @@ const Timer = ({ initialTime, onTimeUp, timeIsUp, setTimeIsUp }) => {
     return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   };
 
-  return !timeIsUp ? (
-    <div>Time left: {formatTime(time)}</div>
-  ) : (
-    <p>Time Up!!</p>
-  );
+  let component = <></>;
+
+  if (timeIsUp === "no") {
+    component = (
+      <div className="flex items-center gap-1">
+        <span>
+          <TbClockHour5 size={20} />
+        </span>
+        <p>Time left: {formatTime(time)}</p>
+      </div>
+    );
+  } else if (timeIsUp === "yes") {
+    component = (
+      <div className="flex items-center gap-1">
+        <span>
+          <FaHourglassEnd size={20} />
+        </span>
+        <p>Time Up!!</p>
+      </div>
+    );
+  } else if (timeIsUp === "done") {
+    component = (
+      <div className="flex items-center gap-2">
+        <span>
+          <FaCheckCircle size={20} />
+        </span>
+        <p>DONE!!</p>
+      </div>
+    );
+  }
+
+  return component;
 };
 
 export default Timer;
