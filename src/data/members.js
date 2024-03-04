@@ -4,9 +4,9 @@ const members = [
         role: "Backend Developer",
         place: "Nigeria",
         img: "/assets/joshua.jpg",
-        x: "https://twitter.com/PapaYiadom",
-        gitHub: "https://github.com/Kingkobi01",
-        linkedIn: "https://www.linkedin.com/in/kwabena-boakye-917530197/"
+        x: "https://x.com/that_jogmg",
+        gitHub: "https://github.com/JoGMG",
+        linkedIn: "https://www.linkedin.com/in/joattah"
     },
     {
         name: "Frank Kaziputa",
