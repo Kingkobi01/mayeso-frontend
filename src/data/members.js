@@ -33,7 +33,7 @@ const members = [
         img: "/assets/sammy.jpg",
         x: "https://twitter.com/OkohSamuelIfea1",
         gitHub: "https://github.com/Kingkobi01",
-        linkedIn: "https://www.linkedin.com/in/kwabena-boakye-917530197/"
+        linkedIn: "https://www.linkedin.com/in/ifeanyi-okoh-257940202"
     },
 ]
 
