@@ -40,11 +40,11 @@ const Question = ({ questions, index, setQuizStatus }) => {
               <label
                 key={idx}
                 htmlFor={option}
-                className="text-white flex items-center gap-4 p-4 rounded-xl bg-white/40 backdrop-blur-2xl shadow-xl peer-checked:bg-secondary transition delay-100 peer-checked:text-violet-900 peer-checked:font-semibold"
+                className="text-white cursor-pointer flex items-center gap-4 p-4 rounded-xl bg-white/40 backdrop-blur-2xl shadow-xl peer-checked:bg-secondary transition delay-100 peer-checked:text-violet-900 peer-checked:font-semibold"
               >
                 {option}
               </label>
-              <div className="flex justify-center items-center absolute top-0 right-4 bottom-0 w-6 h-6 my-auto rounded-full bg-primary scale-0 peer-checked:scale-100 transition delay-100">
+              <div className="flex  justify-center items-center absolute top-0 right-4 bottom-0 w-6 h-6 my-auto rounded-full bg-primary scale-0 peer-checked:scale-100 transition delay-100">
                 <LuCircleDashed />
               </div>
             </div>
