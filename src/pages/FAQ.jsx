@@ -1,6 +1,6 @@
 import React from "react";
 import { Hero } from "../components";
-import faqData from "../data/faq,js";
+import faqData from "../data/faq.js";
 
 function FAQ() {
   return (
