@@ -37,7 +37,7 @@ function Navbar() {
                 : "uppercase cursor-pointer hover:text-secondary duration-200"
             }
           >
-            My Quizes
+            Quizes
           </NavLink>
           <NavLink
             to="/scores"
@@ -47,7 +47,7 @@ function Navbar() {
                 : "uppercase cursor-pointer hover:text-secondary duration-200"
             }
           >
-            scores
+            my scores
           </NavLink>
           <NavLink
             to="/faq"
@@ -113,7 +113,7 @@ function Navbar() {
                   : "uppercase cursor-pointer hover:text-secondary duration-200 border-b pb-3  text-center border-secondary/40"
               }
             >
-              My Quizes
+              Quizes
             </NavLink>
             <NavLink
               to="/scores"
@@ -123,7 +123,7 @@ function Navbar() {
                   : "uppercase cursor-pointer hover:text-secondary duration-200 border-b pb-3  text-center border-secondary/40"
               }
             >
-              scores
+              my scores
             </NavLink>
             <NavLink
               to="/faq"
