@@ -58,9 +58,12 @@ function Quiz() {
     const correctQuestions = indices.filter(
       (index) => quizStatus[index].status === "correct"
     );
-    console.log(correctQuestions);
     const score = correctQuestions.length;
-    setQuizScore((prevState) => ({ ...prevState, score: score }));
+    setQuizScore({
+      title: quiz ? quiz.title : "",
+      score: score,
+      outOf: quiz ? quiz.questions.length : 0,
+    });
 
     localStorage.setItem(
       "scores",
