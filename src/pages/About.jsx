@@ -10,7 +10,7 @@ function About() {
         headText={"Empowering Learning, Enriching Lives"}
         subText={"Discover the Story Behind Mayeso"}
       />
-      <div className="max-w-[960px] mx-auto py-16">
+      <div className="max-w-[960px] mx-auto py-16 px-6 lg:px-0">
         <h2 className="text-3xl lg:text-4xl my-3 lg:font-semibold text-center">
           About Us
         </h2>
