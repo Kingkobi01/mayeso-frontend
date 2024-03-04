@@ -32,7 +32,7 @@ const members = [
         place: "Nigeria",
         img: "/assets/sammy.jpg",
         x: "https://twitter.com/OkohSamuelIfea1",
-        gitHub: "https://github.com/Kingkobi01",
+        gitHub: "https://github.com/Dcardinal042",
         linkedIn: "https://www.linkedin.com/in/ifeanyi-okoh-257940202"
     },
 ]
