@@ -27,7 +27,7 @@ function Navbar() {
                 : "uppercase cursor-pointer hover:text-secondary duration-200"
             }
           >
-            About Us
+            about
           </NavLink>
           <NavLink
             to="/quiz"
@@ -103,7 +103,7 @@ function Navbar() {
                   : "uppercase cursor-pointer hover:text-secondary duration-200 border-b pb-3  text-center border-secondary/40"
               }
             >
-              About Us
+              about
             </NavLink>
             <NavLink
               to="/quiz"
