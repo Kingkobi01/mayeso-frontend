@@ -2,7 +2,7 @@ const members = [
     {
         name: "Joshua Attah",
         role: "Backend Developer",
-        place: "Nigeria",
+        place: "Abuja, Nigeria",
         img: "/assets/joshua.jpg",
         x: "https://x.com/that_jogmg",
         gitHub: "https://github.com/JoGMG",
