@@ -9,13 +9,14 @@ import {
 import { Link, useParams } from "react-router-dom";
 import { Hero, Question } from "../components";
 import Timer from "../components/Timer";
+import QuizScoreContext from "../context/QuizScoreContext";
 import ScoresContext from "../context/ScoresContext";
 import quizContext from "../context/quizContext";
 
 function Quiz() {
   const { quizId } = useParams();
-  const { quizes = [] } = useContext(quizContext);
-  const { scores } = useContext(ScoresContext);
+  const { quizes = [], loading, failed } = useContext(quizContext);
+  const { scores, setScores } = useContext(ScoresContext);
   const [quizStatus, setQuizStatus] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [timeIsUp, setTimeIsUp] = useState("no");
@@ -28,11 +29,7 @@ function Quiz() {
 
   const [currentQuestionIndex, setcurrentQuestionIndex] = useState(0);
 
-  const [quizScore, setQuizScore] = useState({
-    title: quiz ? quiz.title : "",
-    score: 0,
-    outOf: quiz ? quiz.questions.length : 0,
-  });
+  const { quizScore, setQuizScore } = useContext(QuizScoreContext);
 
   const firstQuestion = () => {
     currentQuestionIndex !== 0 && setcurrentQuestionIndex(0);
@@ -59,25 +56,26 @@ function Quiz() {
       (index) => quizStatus[index].status === "correct"
     );
     const score = correctQuestions.length;
-    setQuizScore({
+
+    const newQuizScore = {
+      quizId: quiz._id,
       title: quiz ? quiz.title : "",
       score: score,
       outOf: quiz ? quiz.questions.length : 0,
-    });
+    };
 
-    localStorage.setItem(
-      "scores",
-      JSON.stringify([
-        ...scores,
-        {
-          quizId: quiz._id,
-          ...quizScore,
-        },
-      ])
-    );
+    setQuizScore(newQuizScore);
 
+    const updatedScores = [...scores, newQuizScore];
     setSubmitted(true);
   };
+  useEffect(() => {
+    if (submitted) {
+      const updatedScores = [...scores, quizScore];
+      setScores(updatedScores);
+      localStorage.setItem("scores", JSON.stringify(updatedScores));
+    }
+  }, [submitted]);
 
   useEffect(() => {
     if (timeIsUp === "yes" && !submitted) {
