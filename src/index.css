@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .btn {
-    @apply border border-accent p-3 text-sm rounded-md hover:bg-accent hover:text-primary duration-200
+    @apply border border-accent p-3 rounded-md hover:bg-accent hover:text-primary duration-200
 }
