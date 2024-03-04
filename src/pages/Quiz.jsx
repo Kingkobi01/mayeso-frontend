@@ -167,7 +167,7 @@ function Quiz() {
                         <FaStepBackward />
                       </button>
                     </div>
-                    <div>
+                    <div className="flex items-start gap-5">
                       <button
                         onClick={() => {
                           handleSubmit();
@@ -181,6 +181,16 @@ function Quiz() {
                       >
                         Submit
                       </button>
+                      <Link
+                        to={"/scores"}
+                        className={`${
+                          currentQuestionIndex === quiz.questions.length - 1
+                            ? "btn hidden lg:block"
+                            : "hidden"
+                        } `}
+                      >
+                        Check Previous Scores
+                      </Link>
                     </div>
                     <div>
                       <button
