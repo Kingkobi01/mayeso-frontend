@@ -3,6 +3,8 @@ import QuizContext from "./quizContext";
 
 const QuizContextProvider = ({ children }) => {
   const [quizes, setQuizes] = useState([]);
+  const [failed, setFailed] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [topics, setTopics] = useState([
     "Sports",
     "Geography",
@@ -18,13 +20,25 @@ const QuizContextProvider = ({ children }) => {
         setfailed(true);
         throw new Error();
       }
+      setLoading(false);
       const data = await res.json();
       setQuizes(data);
     };
     fetchQuizes();
   }, [quizes]);
   return (
-    <QuizContext.Provider value={{ quizes, setQuizes, topics, setTopics }}>
+    <QuizContext.Provider
+      value={{
+        quizes,
+        setQuizes,
+        topics,
+        setTopics,
+        failed,
+        setFailed,
+        loading,
+        setLoading,
+      }}
+    >
       {children}
     </QuizContext.Provider>
   );
