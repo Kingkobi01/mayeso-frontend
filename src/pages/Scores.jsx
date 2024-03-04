@@ -14,10 +14,7 @@ function Scores() {
         <h1 className="text-2xl lg:text-3xl my-3 lg:font-semi-bold text-center">
           Your Scores
         </h1>
-        <p className="text-xs pt-1 pb-8">
-          Please note that the scores you see here are ones from this browser
-          only
-        </p>
+
         {scores &&
           scores.map((score) => (
             <div
@@ -35,6 +32,10 @@ function Scores() {
               </p>
             </div>
           ))}
+        <p className="text-xs pt-1 py-3 text-center">
+          Please note that the scores you see here are ones from this browser
+          only
+        </p>
       </div>
     </div>
   );
