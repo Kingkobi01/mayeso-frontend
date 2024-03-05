@@ -12,7 +12,7 @@ function FAQ() {
           "We've Got Answers! Explore our Frequently Asked Questions to find the information you need."
         }
       />
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto max-w-[1240px] px-4 py-16">
         <h1 className="text-3xl font-bold mb-4 pb-2 text-center">
           Frequently Asked Questions (FAQ)
         </h1>
