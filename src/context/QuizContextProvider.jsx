@@ -17,7 +17,7 @@ const QuizContextProvider = ({ children }) => {
     const fetchQuizes = async () => {
       const res = await fetch("https://mayeso-app.adaptable.app/exams");
       if (!res.ok) {
-        setfailed(true);
+        setFailed(true);
         throw new Error();
       }
       setLoading(false);

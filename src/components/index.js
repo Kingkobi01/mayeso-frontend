@@ -1,3 +1,4 @@
+import CardSkeleton from "./CardSkeleton";
 import Footer from "./Footer";
 import Hero from "./Hero";
 import Layout from "./Layout";
@@ -8,5 +9,5 @@ import QuizList from "./QuizList";
 import TeamMember from "./TeamMember";
 
 
-export { Footer, Hero, Layout, Navbar, Question, QuizCard, QuizList, TeamMember };
+export { CardSkeleton, Footer, Hero, Layout, Navbar, Question, QuizCard, QuizList, TeamMember };
 
