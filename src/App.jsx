@@ -1,21 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Layout } from "./components";
-import {
-  About,
-  CreateQuiz,
-  FAQ,
-  Home,
-  NotFound,
-  Quiz,
-  Quizes,
-  Scores,
-} from "./pages";
+import { About, CreateQuiz, FAQ, Home, Quiz, Quizes, Scores } from "./pages";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    errorElement: <NotFound />,
+    // errorElement: <NotFound />,
     children: [
       {
         path: "/",
